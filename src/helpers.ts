@@ -26,3 +26,9 @@ export function getAppDataPath() {
 export function arrayHasDuplicates<T>(array: T[]) {
   return new Set(array).size !== array.length
 }
+
+const [_, __, ...argv] = process.argv
+
+export function argvAsString() {
+  return argv.map(a => `"${a}"`).join(' ')
+}
