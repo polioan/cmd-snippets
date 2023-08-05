@@ -39,4 +39,10 @@ And now you can run it with
 snip hello-world
 ```
 
+To list all snippets run 
+
+```shell
+snip list
+```
+
 Currently support python and node (but it can be extended in EXECUTORS)

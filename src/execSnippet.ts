@@ -10,12 +10,16 @@ function getAllSnippetsFileNames() {
     .map(file => file.name)
 }
 
+export function getAllSnippetsNames(fileNames?: string[] | undefined) {
+  return (fileNames ?? getAllSnippetsFileNames()).map(
+    file => path.parse(file).name
+  )
+}
+
 function resolveSnippetFileName(name: string) {
   const allSnippetsFileNames = getAllSnippetsFileNames()
 
-  if (
-    arrayHasDuplicates(allSnippetsFileNames.map(file => path.parse(file).name))
-  ) {
+  if (arrayHasDuplicates(getAllSnippetsNames(allSnippetsFileNames))) {
     error('Found duplicate snippets!')
   }
 
