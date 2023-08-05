@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "declaration": false,
+
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+
+    "outDir": "./dist",
+
+    "lib": ["ESNext"],
+    "plugins": [],
+
+    "allowJs": true,
+    "checkJs": true,
+
+    "strict": true,
+    "alwaysStrict": true,
+
+    "useDefineForClassFields": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitOverride": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["src", ".eslintrc.cjs", "tsup.config.ts"],
+  "exclude": ["node_modules"]
+}

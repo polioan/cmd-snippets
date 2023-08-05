@@ -1,0 +1,60 @@
+{
+  "name": "cmd-snippets",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ivan Polushin",
+    "url": "https://t.me/polioan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polioan/cmd-snippets"
+  },
+  "homepage": "https://github.com/polioan/cmd-snippets#readme",
+  "bugs": {
+    "url": "https://github.com/polioan/cmd-snippets/issues"
+  },
+  "funding": "https://boosty.to/polioan",
+  "keywords": [
+    "snippets",
+    "cmd",
+    "productivity",
+    "commands",
+    "cli"
+  ],
+  "description": "Create cmd snippets",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "snip": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=15"
+  },
+  "engineStrict": true,
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prebuild": "rimraf dist",
+    "test:types": "tsc --noEmit",
+    "test": "npm run test:types",
+    "format": "prettier --write \"./**/*.{js,ts,cts,cjs,mjs,json,yml}\"",
+    "format:check": "prettier --check \"./**/*.{js,ts,cts,cjs,mjs,json,yml}\"",
+    "publish:dryrun": "npm publish --dry-run",
+    "check": "npm run format:check && npm run test && npm run publish:dryrun"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.7",
+    "prettier": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6"
+  }
+}
