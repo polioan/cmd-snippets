@@ -9,15 +9,17 @@ if (!fs.existsSync(SAVE_PATH)) {
   fs.mkdirSync(SAVE_PATH)
 }
 
-if (process.argv[2] === 'list') {
+const action = process.argv[2]
+
+if (action === 'list') {
   for (const name of getAllSnippetsNames()) {
     console.log(name)
   }
   process.exit(0)
 }
 
-if (!process.argv[2]) {
+if (!action) {
   error('Provide snippet name!')
 }
 
-execSnippet(process.argv[2])
+execSnippet(action)

@@ -39,9 +39,7 @@ export function execSnippet(name: string) {
   const ext = path.extname(snippetFileName)
   const executor = EXECUTORS.find(executor => executor.extensions.includes(ext))
   if (!executor) {
-    error(
-      `Executor for "${path.extname(snippetFileName)}" extension not found!`
-    )
+    error(`Executor for "${ext}" extension not found!`)
   }
   executor.exec(snippetFileName)
 }
