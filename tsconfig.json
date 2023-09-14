@@ -44,6 +44,6 @@
     "noImplicitOverride": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["src", ".eslintrc.cjs", "tsup.config.ts"],
+  "include": ["src", ".eslintrc.cjs", "rollup.config.js"],
   "exclude": ["node_modules"]
 }
